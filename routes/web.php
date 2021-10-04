@@ -24,3 +24,14 @@ Auth::routes();
 Route::get('/home', [
     HomeController::class, 'index'
 ])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+Route::resource('consultas', App\Http\Controllers\ConsultaController::class);
+
+Route::resource('articles', App\Http\Controllers\ArticleController::class);
